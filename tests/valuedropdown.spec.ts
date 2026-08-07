@@ -1,5 +1,5 @@
 import { test, expect } from "@playwright/test";
-test.only('verify dropdown value', async ({page}) => {
+test('verify dropdown value', async ({page}) => {
     await page.goto('https://demowebshop.tricentis.com/');  
     await page.getByRole('link', { name: 'Books' }).first().click();
 	

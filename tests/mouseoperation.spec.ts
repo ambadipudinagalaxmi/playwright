@@ -56,7 +56,7 @@ test("mouse Operations", async({page})=>{
 });*/
 
 
-test.only("drag/drop", async({page})=>{
+test("drag/drop", async({page})=>{
     await page.goto('https://the-internet.herokuapp.com/drag_and_drop');
 
 

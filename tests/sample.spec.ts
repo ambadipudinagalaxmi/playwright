@@ -31,7 +31,7 @@ await page.getByAltText('14.1-inch Laptop').dblclick();
 await page.waitForTimeout(5000);
 });
 
-test.only("scrolling", async({page})=>{
+test("scrolling", async({page})=>{
   await page.goto('https://the-internet.herokuapp.com/infinite_scroll');
   let pre=0;
   while(true){
