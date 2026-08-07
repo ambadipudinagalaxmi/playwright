@@ -13,7 +13,7 @@ test('auto Scrolling', async({page})=>{
 });
 
 
-test.only('infinite looping', async({page})=>{
+test('infinite looping', async({page})=>{
     await page.goto('https://the-internet.herokuapp.com/infinite_scroll');
     let pre = 0;
     while(true){
