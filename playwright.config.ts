@@ -12,6 +12,10 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+    reporter: [
+    ['list'],                // shows results in console
+    ['allure-playwright']    // generates allure-results folder
+  ],
   testDir: './tests',
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -76,4 +80,5 @@ export default defineConfig({
   //   url: 'http://localhost:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
+
 });
