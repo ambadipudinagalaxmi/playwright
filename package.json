@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "playwright test"
+    "test": "playwright test",
+    "sanity": "playwright test  --grep @sanity",
+    "allure": "allure serve allure-results", 
+    "test:allure":"playwright test && allure serve allure-results"
   },
   "keywords": [],
   "author": "",
