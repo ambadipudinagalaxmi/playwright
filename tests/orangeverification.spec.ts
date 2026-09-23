@@ -16,14 +16,15 @@ test.beforeEach(async ({ page }) => {
  // await expect(page.getByRole("heading", { name: "Dashboard" })).toBeVisible();
 });
 
-test.afterEach(async ({ page }) => {
-  await page.locator('.oxd-userdropdown-img').click();
-  await page.getByText('Logout').click();
-});
+//test.afterEach(async ({ page }) => {
+ // await page.locator('.oxd-userdropdown-img').click();
+ // await page.getByText('Logout').click();
+//});
 
 // Test Case 01: Dashboard widget verification
 test("TC01 Orange HRM Dashboard widget verification", async ({ page }) => {
   await expect(page.getByRole("heading", { name: "Dashboard" })).toBeVisible();
+  await page.waitForTimeout(1000);
   await expect.soft(page.getByText("My Actions")).toBeVisible();
   await expect.soft(page.getByText("Time at Work")).toBeVisible();
   await expect.soft(page.getByText("Quick Launch")).toBeVisible();
@@ -33,8 +34,9 @@ test("TC01 Orange HRM Dashboard widget verification", async ({ page }) => {
 });
 
 // Test Case 02: Dashboard page menu verification
-test("TC02 Orange HRM Dashboard page verification", async ({ page }) => {
+test.only("TC02 Orange HRM Dashboard page verification", async ({ page }) => {
   await expect.soft(page.getByRole("heading", { name: "Dashboard" })).toBeVisible();
+  page.waitForTimeout(1000);
   await expect.soft(page.getByRole("link", { name: "Admin" })).toBeVisible();
   await expect.soft(page.getByText("PIM")).toBeVisible();
   await expect.soft(page.getByRole("link", { name: "Leave" })).toBeVisible();
@@ -46,5 +48,6 @@ test("TC02 Orange HRM Dashboard page verification", async ({ page }) => {
   await expect.soft(page.getByText("Maintenance")).toBeVisible();
   await expect.soft(page.getByText("Claim")).toBeVisible();
   await expect.soft(page.getByRole("link", { name: "Buzz" })).toBeVisible();
+  await page.waitForTimeout(1000);
   await expect.soft(page.getByText("Directory")).toBeVisible();
 });

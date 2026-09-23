@@ -9,4 +9,3 @@ await page.getByText("Admin").first().click();
 await page.locator("input.oxd-input.oxd-input--active").last().fill('karunya');
 await page.waitForTimeout(5000);
 });
-

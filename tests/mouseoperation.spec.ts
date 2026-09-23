@@ -1,7 +1,7 @@
 import {test,expect} from '@playwright/test'
 
 
-test("mouse Operations", async({page})=>{
+test.only("mouse Operations", async({page})=>{
     await page.goto('https://demowebshop.tricentis.com/');
  await page.waitForTimeout(5000);
 
@@ -16,7 +16,7 @@ test("mouse Operations", async({page})=>{
  await page.waitForTimeout(5000);
 
     // right click
-     await page.getByRole('link', {name: 'Notebooks'}).first().click({button:'right'});
+ await page.getByRole('link', {name: 'Notebooks'}).first().click({button:'right'});
  await page.waitForTimeout(5000);
 
     // double click
