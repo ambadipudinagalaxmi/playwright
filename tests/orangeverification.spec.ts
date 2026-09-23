@@ -34,7 +34,7 @@ test("TC01 Orange HRM Dashboard widget verification", async ({ page }) => {
 });
 
 // Test Case 02: Dashboard page menu verification
-test.only("TC02 Orange HRM Dashboard page verification", async ({ page }) => {
+test("TC02 Orange HRM Dashboard page verification", async ({ page }) => {
   await expect.soft(page.getByRole("heading", { name: "Dashboard" })).toBeVisible();
   page.waitForTimeout(1000);
   await expect.soft(page.getByRole("link", { name: "Admin" })).toBeVisible();
