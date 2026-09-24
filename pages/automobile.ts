@@ -33,8 +33,5 @@ export class AutomobileVerification {
     await this.page.locator('#nextenterinsurantdata').click();
     await this.page.waitForTimeout(3000);
   }
-  async fillinsurantdata(){
-
-  }
   
 }
